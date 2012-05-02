@@ -67,7 +67,7 @@
 		$("head").append('<style id="font-friend-stylesheet" type="text/css" media="screen">'+fontFriend.css+'</style>');
 		body.append("<div id='font-friend'></div>");
 		$("#font-friend").html(fontFriend.html).addClass("open");
-		$("#ff-credit").append("<span> "+fontFriend.version+"</span>");
+//		$("#ff-credit").append("<span> "+fontFriend.version+"</span>");
 
 		addBehaviours();
 		customFamilyDefinitionsCheck();
@@ -85,7 +85,7 @@
 			if ( data.kind === "webfonts#webfontList") {
 				$.each(data.items, function(index, value) {
 					if ( $.inArray(value.family, fontFriend.existingGoogleFamilies) !== -1 ) {
-						value.family = '✓ '+value.family;
+						value.family = '- '+value.family;
 					}
 					else {
 						fontFriend.googleFamilies[value.family] = value.variants;
@@ -140,7 +140,7 @@
 
 			$('<link rel="stylesheet" type="text/css" href="'+url+'" >').appendTo("head");
 			addCustomFontList([val], 'www.google.com');
-			self.find(":selected").text('✓ '+val);
+			self.find(":selected").text('- '+val);
 			$("#ff-font-family-custom").find("li:last").click();
 			
 			// so we don't add it again later
@@ -331,7 +331,7 @@
 
 	function addCustomFontList(list, badge){
 		var existingUl = $("#ff-font-family-custom"),
-		ul = $('<ul id="ff-font-family-custom" data-ff="fontFamily" class="ff-hidden"></ul>'),
+		ul = $('<ul id="ff-font-family-custom" data-ff="fontFamily"></ul>'),
 		html = "",
 		h6Title = 'Click to toggle between custom & stock font families',
 		toggler = ': <span class="ff-custom ff-active">Custom</span><span class="ff-stock">Stock</span>';
@@ -354,14 +354,14 @@
 
 		$("#ff-font-family").append(html);
 		$("#ff-font-family > h6")
-			.addClass('ff-clickable').attr("title", h6Title)
-			.append(toggler)
+//			.addClass('ff-clickable').attr("title", h6Title)
+//			.append(toggler)
 			// click handlers for the custom/stock toggler
 			.click(function() {
 				var self = $(this),
 				isCustom = self.hasClass("ff-custom") ? true : false,
-				customList = $("#ff-font-family-custom"),
-				stockList = $("#ff-font-family-sans, #ff-font-family-serif"),
+				customList = $("#ff-font-family-sans"),
+				stockList = $("#ff-font-family-sans, #ff-font-family-sans"),
 				isCustom = ! customList.is(":visible"),
 				togglers = self.children(),
 				speed = 100,
@@ -381,7 +381,6 @@
 				toHide.fadeOut(speed, function() {
 					toShow.fadeIn(speed);
 				});
-
 			});
 		buildFamilies();
 		$("#ff-font-family > h6").click();

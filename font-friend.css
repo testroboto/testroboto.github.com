@@ -5,14 +5,14 @@
 	left: 30px;
 	background-color: #fff;
 	background-color: rgba(255,255,255,0.93);
-	width: 740px;
+	width: 600px;
 	color: #222;
 	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.3);
 	   -moz-box-shadow: 1px 1px 5px rgba(0,0,0,.3);
 	        box-shadow: 1px 1px 5px rgba(0,0,0,.3);
 	z-index: 10000;
 	text-align: left;
-	height: 310px;
+	height: 100px;
 }
 #font-friend, #ff-drop h6, #ff-drop li {
 	line-height:1.5 !important;
@@ -21,16 +21,17 @@
 	padding: 12px 12px 12px 36px;
 }
 #ff-toggle {
-	background-color: #222;
+	background-color: #900;
 	color: #eee;
 	display: block;
-	width: 12px;
-	height: 16px;
-	padding: 0 1px 0 3px;
+	width: 14px;
+	height: 14px;
+	padding: 0px;
 	position: absolute;
 	top: 0;
 	left: 0;
-	font-size: 16px;
+	font-size: 8px;
+    text-align:center;
 	line-height: 1 !important;
 	cursor: pointer;
 	z-index: 10001;
@@ -50,13 +51,9 @@
 }
 #ff-toggle:hover {
 	color: #fff;
-	background-color: #555;
+	background-color: #c00;
 }
 .open #ff-toggle {
-width: auto;
-height: 32px;
-font-size: 32px;
-padding: 0 3px;
 }
 #ff-drop form {
 	background: none;
@@ -65,7 +62,7 @@ padding: 0 3px;
 }
 #ff-drop h6 {
 	font-size: 13px;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid #DEDEDE;
 	margin: 0 0 6px !important;
 	padding: 0 !important;
 	text-indent: 0 !important;
@@ -244,15 +241,59 @@ padding: 0 3px;
 	cursor: pointer;
 }
 #ff-font-drop {
-	font-size: 11px !important;
-	background-color: #e6e6e6;
-	padding: 15px 0;
-	text-align: center;
-	border: 1px solid #aaa;
-	margin-bottom: 6px;
+
+-webkit-border-horizontal-spacing: 0px;
+-webkit-border-vertical-spacing: 0px;
+-webkit-user-select: none;
+background-color: #D14836;
+background-image: -webkit-linear-gradient(top, #DD4B39, #D14836);
+border-bottom-color: transparent;
+border-bottom-left-radius: 2px;
+border-bottom-right-radius: 2px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-collapse: separate;
+border-left-color: transparent;
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: transparent;
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: transparent;
+border-top-left-radius: 2px;
+border-top-right-radius: 2px;
+border-top-style: solid;
+border-top-width: 1px;
+color: white;
+cursor: default;
+display: inline-block;
+font-family: arial, sans-serif;
+font-size: 11px;
+font-weight: bold;
+height: 50px;
+line-height: 27px;
+margin-right: 1px;
+min-height: 0px;
+min-width: 54px;
+outline-color: white;
+outline-style: none;
+outline-width: 0px;
+overflow-x: visible;
+overflow-y: visible;
+padding-bottom: 0px;
+padding-left: 8px;
+padding-right: 8px;
+padding-top: 0px;
+position: relative;
+text-align: center;
+text-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 0px;
+text-transform: uppercase;
+vertical-align: top;
+width: 100px;
+
 }
 #ff-font-drop.dropzone {
-	background-color: #fff;
+	background-color: red;
 	border-color: #111;
 }
 #ff-drop select {
