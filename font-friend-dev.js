@@ -76,8 +76,8 @@
 		webfontSpecimenCheck();
 		maybeAddEmbeddedFonts();
 		getGoogleFonts();
-        addGoogleFont('Roboto');
-// DC: This is a hack that doesn't work - addGoogleFont('Roboto') also doesn't work :(
+// DC: This is a hack that doesn't work, so commented out, and rolled my own
+//      addGoogleFont('Roboto');
         addGlobalLink('http://fonts.googleapis.com/css?family=Roboto');
 	}
 
