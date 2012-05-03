@@ -76,7 +76,19 @@
 		webfontSpecimenCheck();
 		maybeAddEmbeddedFonts();
 		getGoogleFonts();
+        addGlobalLink('http://fonts.googleapis.com/css?family=Roboto');
 	}
+
+    function addGlobalLink(linkUrl) {
+        var head, link;
+        head = document.getElementsByTagName('head')[0];
+        if (!head) { return; }
+        link = document.createElement('link');
+        link.type = 'text/css';
+        link.rel = 'stylesheet'; 
+        link.href = linkUrl;
+        head.appendChild(link);
+    }
 
 	function getGoogleFonts() {
 		var api = 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBUK3PeqSEzwPNIyg94dBQpziFOPvm7-aA',
